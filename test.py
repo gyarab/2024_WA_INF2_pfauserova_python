@@ -13,4 +13,4 @@ def fibonacci(n):
     
     return fib_sequence
 if __name__ == "__main__":  
-    print(fibonacci(15)) 
+    print(fibonacci(0)) 
