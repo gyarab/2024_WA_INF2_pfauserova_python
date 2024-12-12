@@ -1,9 +1,9 @@
 def fibonacci(n):
     if not isinstance(n,int) or n < 0:
         raise ValueError("Input must be a positive integer")
-    elif n == 1:
+    elif n == 0:
         return [0]
-    elif n == 2:
+    elif n == 1:
         return [0, 1]
     
     fib_sequence = [0, 1]
