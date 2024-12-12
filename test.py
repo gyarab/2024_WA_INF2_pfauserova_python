@@ -13,12 +13,16 @@ def fibonacci(n):
     
 
 def is_prime(num):
-    if not isinstance(num, int) or num < 2:
+    if not isinstance(num, int) or num < 1:
         raise ValueError("Input must be an integer greater than 1")
+    elif num == 1:
+        return False
+    elif num == 2:
+        return True
     for i in range(2, int(num**0.5) + 1):
         if num % i == 0:
             return False
         return True
 if __name__ == "__main__":  
     print(fibonacci(3)) 
-    print(is_prime(5))  
+    print(is_prime(1))  
