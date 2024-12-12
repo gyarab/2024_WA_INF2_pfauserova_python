@@ -1,5 +1,5 @@
 def fibonacci(n):
-    if not isinstance(n,int) or n <= 0:
+    if not isinstance(n,int) or n < 0:
         raise ValueError("Input must be a positive integer")
     elif n == 1:
         return [0]
