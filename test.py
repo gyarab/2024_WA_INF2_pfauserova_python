@@ -10,7 +10,7 @@ def fibonacci(n):
     
 
 
-    print(fibonacci(3)) 
+    
 
 def is_prime(num):
     if not isinstance(num, int) or num < 2:
@@ -20,4 +20,5 @@ def is_prime(num):
             return False
         return True
 if __name__ == "__main__":  
-    print(is_prime(78))  
+    print(fibonacci(3)) 
+    print(is_prime(5))  
