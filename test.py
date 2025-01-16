@@ -1,4 +1,3 @@
-
 ACCENTED_CHAR_MAP = {
     'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE', 'Ç': 'C', 'È': 'E', 'É': 'E',
     'Ê': 'E', 'Ë': 'E', 'Ì': 'I', 'Í': 'I', 'Î': 'I', 'Ï': 'I', 'Ð': 'D', 'Ñ': 'N', 'Ò': 'O', 'Ó': 'O',
@@ -73,8 +72,8 @@ def morse(text):
             result += MORSE_CODE_DICT[char] + " "
         elif char.isdigit():
             result += MORSE_CODE_DICT[char] + " "
-        elif char in "., ":
-            result += char
+        elif char == ' ':
+            result += '/ '
         else:
             continue  # Ignore any special signs
     return result.strip()
