@@ -8,57 +8,12 @@ ACCENTED_CHAR_MAP = {
     'þ': 'th', 'ÿ': 'y', 'Ž': 'Z', 'ž': 'z'
 }
 
-def is_prime(num):
-    if not isinstance(num, int) or num < 1:
-        raise ValueError("Input must be an integer greater than 1")
-    elif  num == 1:
-        return False
-    elif num == 2:
-        return True
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-        return True
-
-def caesar_encode(text):
-    shift = 3
-    result = ""
-    
-    for char in text:
-        if char.isalpha():
-            if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
-                shift_base = ord('A') if char.isupper() else ord('a')
-                result += chr((ord(char) - shift_base + shift) % 26 + shift_base)
-            else:
-                raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
-        elif char in "., ":
-            result += char
-        else:
-            raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
-    return result
-
-def caesar_decode(text, shift):
-    result = ""
-    for char in text:
-        if char.isalpha():
-            if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
-                shift_base = ord('A') if char.isupper() else ord('a')
-                result += chr((ord(char) - shift_base - shift) % 26 + shift_base)
-            else:
-                raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
-        elif char in "., ":
-            result += char
-        else:
-            raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
-    return result
-
 MORSE_CODE_DICT = {
     'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
     'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
     'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
     'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....',
-    '6': '-....', '7': '--...', '8': '---..', '9': '----.', '0': '-----', ', ': '--..--', '.': '.-.-.-',
-    '?': '..--..', '/': '-..-.', '-': '-....-', '(': '-.--.', ')': '-.--.-', ' ': '/'
+    '6': '-....', '7': '--...', '8': '---..', '9': '----.', '0': '-----', ' ': '/'
 }
 
 def remove_accents(text):
