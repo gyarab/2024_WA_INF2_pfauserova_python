@@ -55,7 +55,7 @@ def caesar_decode(text, shift):
 
 
     if __name__ == "__main__":  
-    print(fibonacci(3))  # [0, 1, 1]
-    print(is_prime(1))  # False
-    print(caesar_encode("Hello, World.", 3))  # Khoor, Zruog.
-    print(caesar_decode("Khoor, Zruog.", 3))  # Hello, World.
+        print(fibonacci(3))  # [0, 1, 1]
+        print(is_prime(1))  # False
+        print(caesar_encode("Hello, World.", 3))  # Khoor, Zruog.
+        print(caesar_decode("Khoor, Zruog.", 3))  # Hello, World.
