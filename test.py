@@ -1,15 +1,6 @@
 from unidecode import unidecode
 
-def fibonacci(n):
-    if not isinstance(n,int) or n < 0:
-        raise ValueError("Input must be a positive integer")
-    elif nn == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:   
-        return fibonacci(n-1) + fibonacci(n-2)
-    
+
 
 def is_prime(num):
     if not isinstance(num, int) or num < 1:
@@ -79,7 +70,6 @@ def morse(text):
     return result.strip()
 
 if __name__ == "__main__":
-    print(fibonacci(3)) 
     print(is_prime(1))
     print(caesar_encode("Hello, World."))  # Example usage
     print(caesar_decode("Khoor, Zruog.", 3))  # Example usage
