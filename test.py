@@ -1,7 +1,9 @@
+from unidecode import unidecode
+
 def fibonacci(n):
     if not isinstance(n,int) or n < 0:
         raise ValueError("Input must be a positive integer")
-    elif n == 0:
+    elif nn == 0:
         return 0
     elif n == 1:
         return 1
@@ -9,13 +11,10 @@ def fibonacci(n):
         return fibonacci(n-1) + fibonacci(n-2)
     
 
-
-    
-
 def is_prime(num):
     if not isinstance(num, int) or num < 1:
         raise ValueError("Input must be an integer greater than 1")
-    elif num == 1:
+    elif  num == 1:
         return False
     elif num == 2:
         return True
@@ -23,14 +22,11 @@ def is_prime(num):
         if num % i == 0:
             return False
         return True
-if __name__ == "__main__":  
-    print(fibonacci(3)) 
-    print(is_prime(1))  
-
 
 def caesar_encode(text):
     shift = 3
     result = ""
+    text = unidecode(text)  # Convert accented characters to plain ASCII
     for char in text:
         if char.isalpha():
             if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
@@ -59,8 +55,33 @@ def caesar_decode(text, shift):
             raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
     return result
 
+MORSE_CODE_DICT = {
+    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
+    'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
+    'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
+    'Y': '-.--', 'Z': '--..', '1': '.----', '2': '..---', '3': '...--', '4': '....-', '5': '.....',
+    '6': '-....', '7': '--...', '8': '---..', '9': '----.', '0': '-----', ', ': '--..--', '.': '.-.-.-',
+    '?': '..--..', '/': '-..-.', '-': '-....-', '(': '-.--.', ')': '-.--.-', ' ': '/'
+}
+
+def morse(text):
+    result = ""
+    text = unidecode(text)  # Convert accented characters to plain ASCII
+    for char in text.upper():
+        if char in MORSE_CODE_DICT:
+            result += MORSE_CODE_DICT[char] + " "
+        elif char.isdigit():
+            result += MORSE_CODE_DICT[char] + " "
+        elif char in "., ":
+            result += char
+        else:
+            continue  # Ignore any special signs
+    return result.strip()
+
 if __name__ == "__main__":
     print(fibonacci(3)) 
     print(is_prime(1))
     print(caesar_encode("Hello, World."))  # Example usage
     print(caesar_decode("Khoor, Zruog.", 3))  # Example usage
+    print(morse("Hello World 123"))  # Example usage
+    
