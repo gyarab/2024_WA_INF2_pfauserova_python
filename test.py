@@ -28,34 +28,39 @@ if __name__ == "__main__":
     print(is_prime(1))  
 
 
-def caesar_encode(text, shift):
+def caesar_encode(text):
+    shift = 3
     result = ""
     for char in text:
         if char.isalpha():
-            shift_base = ord('A') if char.isupper() else ord('a')
-            result += chr((ord(char) - shift_base + shift) % 26 + shift_base)
-        elif char in ".,":  # Zachovat tečky a čárky
+            if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
+                shift_base = ord('A') if char.isupper() else ord('a')
+                result += chr((ord(char) - shift_base + shift) % 26 + shift_base)
+            else:
+                raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
+        elif char in "., ":
             result += char
         else:
-            raise ValueError(f"Invalid character '{char}' in input.")  # Chyba pro jiné znaky
+            raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
     return result
 
 def caesar_decode(text, shift):
     result = ""
     for char in text:
         if char.isalpha():
-            shift_base = ord('A') if char.isupper() else ord('a')
-            result += chr((ord(char) - shift_base - shift) % 26 + shift_base)
-        elif char in ".,":  # Zachovat tečky a čárky
+            if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
+                shift_base = ord('A') if char.isupper() else ord('a')
+                result += chr((ord(char) - shift_base - shift) % 26 + shift_base)
+            else:
+                raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
+        elif char in "., ":
             result += char
         else:
-            raise ValueError(f"Invalid character '{char}' in input.")  # Chyba pro jiné znaky
+            raise ValueError(f"Invalid character '{char}' in input.")  # Error for other characters
     return result
 
-
-
-    if __name__ == "__main__":  
-        print(fibonacci(3))  # [0, 1, 1]
-        print(is_prime(1))  # False
-        print(caesar_encode("Hello, World.", 3))  # Khoor, Zruog.
-        print(caesar_decode("Khoor, Zruog.", 3))  # Hello, World.
+if __name__ == "__main__":
+    print(fibonacci(3)) 
+    print(is_prime(1))
+    print(caesar_encode("Hello, World."))  # Example usage
+    print(caesar_decode("Khoor, Zruog.", 3))  # Example usage
