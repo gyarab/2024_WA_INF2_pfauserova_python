@@ -1,4 +1,3 @@
-from unidecode import unidecode
 
 ACCENTED_CHAR_MAP = {
     'À': 'A', 'Á': 'A', 'Â': 'A', 'Ã': 'A', 'Ä': 'A', 'Å': 'A', 'Æ': 'AE', 'Ç': 'C', 'È': 'E', 'É': 'E',
@@ -25,7 +24,7 @@ def is_prime(num):
 def caesar_encode(text):
     shift = 3
     result = ""
-    text = unidecode(text)  # Convert accented characters to plain ASCII
+    
     for char in text:
         if char.isalpha():
             if 'A' <= char <= 'Z' or 'a' <= char <= 'z':
@@ -81,8 +80,5 @@ def morse(text):
     return result.strip()
 
 if __name__ == "__main__":
-    print(is_prime(1))
-    print(caesar_encode("Hello, World."))  # Example usage
-    print(caesar_decode("Khoor, Zruog.", 3))  # Example usage
-    print(morse("Hello World 123"))  # Example usage
+    print(morse("Hello, World 123"))  # Example usage
     print(morse("Žluťoučký kůň"))  # Example usage
