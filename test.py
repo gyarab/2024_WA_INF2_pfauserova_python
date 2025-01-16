@@ -26,3 +26,18 @@ def is_prime(num):
 if __name__ == "__main__":  
     print(fibonacci(3)) 
     print(is_prime(1))  
+
+def caesar_encode(text, shift):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            shift_base = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - shift_base + shift) % 26 + shift_base)
+        else:
+            result += char
+    return result
+
+if __name__ == "__main__":
+    print(fibonacci(3)) 
+    print(is_prime(1))
+    print(caesar_encode("Hello, World!", 3))  # Example usage
