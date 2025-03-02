@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.nox/
+.cache
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Django stuff:
+*.log
+db.sqlite3
+
+# Flask stuff:
+instance/
+
+# PyInstaller
+*.spec
+
+# Sphinx documentation
+docs/_build/

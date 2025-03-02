@@ -1,1 +1,1 @@
-# 2024_WA_INF2_prauserova_python
+Projekt zobrazuje skladby interpreta Pitbull, dozv9te se z jak0ho jsou roku, alba a kdo je vytvořil.
