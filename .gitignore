@@ -1,36 +1,12 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
+.venv
 
-# Distribution / packaging
-build/
+# Python cache files
+__pycache__/
+
+# Python distribution / packaging
 dist/
+build/
 *.egg-info/
 
-# Unit test / coverage reports
-.coverage
-.tox/
-.nox/
-.cache
 
-# Environments
-.env
-.venv
-env/
-venv/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Django stuff:
-*.log
-db.sqlite3
-
-# Flask stuff:
-instance/
-
-# PyInstaller
-*.spec
-
-# Sphinx documentation
-docs/_build/
+*.sqlite3
