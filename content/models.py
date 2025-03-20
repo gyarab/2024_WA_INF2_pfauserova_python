@@ -8,5 +8,8 @@ class Author(models.Model):
 class Article(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
+    perex = models.TextField()
+    link = models.URLField()
     published_date = models.DateField()
+    date = models.DateField()
     author = models.ForeignKey(Author, on_delete=models.CASCADE)

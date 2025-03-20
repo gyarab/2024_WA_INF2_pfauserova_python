@@ -1,0 +1,114 @@
+
+[
+
+    {
+        "model": "content.article",
+        "pk": 1,
+        "fields": {
+            "title": "Don't Stop the Party",
+            "perex": "z alba Global Warming",
+            "date": "2012-10-16",
+            "link": "https://www.irozhlas.cz/zpravy-svet/pad-asada-nastolil-moznost-navratu-lidi-do-syrie-nestabilita-ale-muze-vest-i-k_2412101315_eku"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 2,
+        "fields": {
+            "title": "DJ Got Us Fallin' in Love",
+            "perex": "z alba Versus",
+            
+            "date": null,
+            "author": "Usher",
+            "link": "https://open.spotify.com/track/4356Typ82hUiFAynbLYbPn"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 3,
+        "fields": {
+            "title": "Rain Over Me",
+            "perex": "z alba Planet Pit",
+            
+            "date": "2011-06-17",
+            "author": "Pitbull ft. Marc Anthony",
+            "link": "https://open.spotify.com/track/2cZrrQMjB63c0iIugYH9zS"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 4,
+        "fields": {
+            "title": "International Love",
+            "perex": "z alba Global Warming",
+            "date": "2011-06-17",
+            "author": "Pitbull ft. Chris Brown",
+            "link": "https://open.spotify.com/track/62zFEHfAYl5kdHYOivj4BC"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 5,
+        "fields": {
+            "title": "Feel This Moment",
+            "perex": "z alba Global Warming",
+            "author": "Pitbull ft. Christina Aguilera",
+            "date": "2012-10-16",
+            "link": "https://open.spotify.com/track/0Hf4aIJpsN4Os2f0y0VqWl"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 6,
+        "fields": {
+            "title": "Time of Our Lives",
+            "perex": "z alba Globalization",
+            "date": "2014-11-17",
+            "author": "Pitbull ft. Ne-Yo",
+            "link": "https://open.spotify.com/track/5dKyZWl2w7Yg3o5k5C3dD5"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 7,
+        "fields": {
+            "title": "Don't Stop the Party",
+            "perex": "z alba Global Warming",
+            "date": "2012-10-16",
+            "link": "https://open.spotify.com/track/3b5v0zj7Z1xvK8f9l5d2q7"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 8,
+        "fields": {
+            "title": "Timber",
+            "perex": "z alba Global Warming: Meltdown",
+            "date": "2013-10-07",
+            "author": "Pitbull ft. Kesha",
+            "link": "https://open.spotify.com/track/1HNE1VBC6Iw7F7hL7pLk8r"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 9,
+        "fields": {
+            "title": "Fireball",
+            "perex": "z alba Globalization",
+            "date": "2014-07-23",
+            "author": "Pitbull ft. John Ryan",
+            "link": "https://open.spotify.com/track/0z7pVBGOD7HCIB7S8eLkLI"
+        }
+    },
+    {
+        "model": "content.article",
+        "pk": 10,
+        "fields": {
+            "title": "Hotel Room Service",
+            "perex": "z alba Rebelution",
+            "date": "2009-06-25",
+            "author": "Pitbull",
+            "link": "https://open.spotify.com/track/2Xm4w9bLcYLbmk1Z7eNw8v"
+        }
+    }
+]

@@ -9,6 +9,7 @@
     },
     {
         "title": "DJ Got Us Fallin' in Love",
+        "perex": "z alba Versus",
         "image": "https://upload.wikimedia.org/wikipedia/en/2/26/Usher_Raymond_Vs._Raymond_Deluxe_Edition.jpg",
         "date": "",
         "author": "Usher",
@@ -26,6 +27,7 @@
     },
     {
         "title": "International Love",
+        "perex": "z alba Global Warming",
         "image": "https://upload.wikimedia.org/wikipedia/en/f/ff/Pitbull_Planet_Pit_Official_Album_Cover.jpg",
         "date": "2011-17-6",
         "author": "Pitbull ft. Chris Brown",
@@ -34,8 +36,10 @@
     },
     {
         "title": "Feel This Moment",
+        "perex": "z alba Global Warming",
         "image": "https://upload.wikimedia.org/wikipedia/en/6/6d/Global_Warming_album.png",
         "author": "Pitbull ft. Christina Aguilera",
+        "date": "2012-16-10",
         "link": "https://open.spotify.com/track/0Hf4aIJpsN4Os2f0y0VqWl",
         "category": "collaboration"
     },
