@@ -1,4 +1,5 @@
-# Django 
-stránka zobrazuje skladby umělce pitbull, zděluje z jakého jsou alba, roku a případně umělce, se kterými vznikla skladba ve spolupráci
+# Django stránka
+
+Zobrazuje hudební knihovnu se skladbami, jejich autory, textem písně a v neposlední řadě žánry.
 
 

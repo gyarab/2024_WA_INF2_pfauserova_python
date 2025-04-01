@@ -1,18 +1,24 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from .models import Article, Author, Category
 
 import json
 
 def homepage(request):
-    with open('db.sqlite3', encoding='utf-8') as f:
-        articles = json.load(f)
-
+    articles = Article.objects.order_by('title')
     return render(request, 'content/homepage.html', {'articles': articles})
 
-def article(request, id):
-    with open('db.sqlite3.json', encoding='utf-8') as f:
-        articles = json.load(f)
 
-    article = articles[id]
+def article(request, id):
+    article = Article.objects.get(pk=id)
+
     return render(request, 'content/article.html', {'article': article})
+
+def author(request, id):
+    author = Author.objects.get(pk=id)
+    return render(request, 'content/author.html', {'author': author})
+
+def category(request, id):
+    category = Category.objects.get(pk=id)
+    return render(request, 'content/category.html', {'category': category})

@@ -1,15 +1,32 @@
-from django.contrib import admin
 from django.db import models
-class Author(models.Model):
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    born = models.DateField()
+
 # Create your models here.
+
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+    bio = models.TextField()
+
+    def __str__(self):
+        return self.name
+    
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.name
+
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField()
     perex = models.TextField()
-    link = models.URLField()
-    published_date = models.DateField()
+    content = models.TextField()
     date = models.DateField()
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    categories = models.ManyToManyField(Category, related_name='articles')
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='articles')
+    counter = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.title[:20]
+    
+
+
