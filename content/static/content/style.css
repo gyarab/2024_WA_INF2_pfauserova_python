@@ -1,7 +1,11 @@
 body {
-    background-color: rgb(240, 245, 243);
     color: palevioletred;
     text-align: center;
+    background-image: url('img\background.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 
